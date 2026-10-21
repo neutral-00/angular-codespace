@@ -9,6 +9,7 @@ export interface Ticker {
 @Service()
 export class MarketFeed {
     private readonly _tickers = signal<Ticker[]>([]);
+    // Keep the writable signal private; consumers can read tickers without changing its state.
     readonly tickers = this._tickers.asReadonly();
 
     constructor() {
