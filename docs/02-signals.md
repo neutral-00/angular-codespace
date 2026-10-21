@@ -4,7 +4,9 @@ Here is everything you need to know, structured the way a strong interview answe
 
 ### 1. The Core Mental Model: What Is a Signal?
 
-A Signal is a **wrapper around a value** that notifies interested consumers when that value changes . It is a getter function. You read it by calling it (`count()`), which allows Angular to track exactly where that value is used. This tracking is the foundation of fine-grained change detection.
+- A Signal is a **wrapper around a value** that notifies its consumers when that value changes . It is a getter function. 
+- You read a signal by calling it like a function, which allows Angular to track exactly where that value is used. 
+- This tracking is the foundation of fine-grained change detection.
 
 **Key types:**
 - **WritableSignal**: Created with `signal(initialValue)`. You update it with `.set(newValue)` or `.update(fn)` .
