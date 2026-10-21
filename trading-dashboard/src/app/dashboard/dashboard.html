@@ -1,0 +1,25 @@
+<h2>Live Market</h2>
+<table class="w-full border-collapse">
+    <thead>
+        <tr>
+            <th class="border-b border-gray-300 p-2 text-left">Symbol</th>
+            <th class="border-b border-gray-300 p-2 text-left">Price</th>
+            <th class="border-b border-gray-300 p-2 text-left">Change</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for (t of feed.tickers(); track t.symbol) {
+            <tr>
+                <td class="border-b border-gray-300 p-2 text-left">{{ t.symbol }}</td>
+                <td
+                    class="border-b border-gray-300 p-2 text-left"
+                    [class.text-green-600]="t.change > 0"
+                    [class.text-red-600]="t.change < 0"
+                >
+                    {{ t.price | number:'1.2-2' }}
+                </td>
+                <td class="border-b border-gray-300 p-2 text-left">{{ t.change | number:'1.2-2' }}</td>
+            </tr>
+        }
+    </tbody>
+</table>
