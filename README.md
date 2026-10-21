@@ -15,7 +15,7 @@ Here’s a straightforward way to create and run an **Angular 21** project in Co
    ```bash
    node --version
    npm --version
-   npx @angular/cli@21 new my-angular-app
+   npx @angular/cli new my-angular-app
    ```
 
    The CLI may ask whether to enable features or select a stylesheet format; choose the defaults to get started. If prompted to install the Angular CLI package, answer `y`.
